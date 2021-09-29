@@ -16,6 +16,7 @@ class Network(torch.nn.Module):
         self.layer3 = Linear(hidden_layers, 1)
 
     def forward(self, x):
+        
         h = self.layer1.forward(x).relu()
         h = self.layer2.forward(h).relu()
         return self.layer3.forward(h).sigmoid()
