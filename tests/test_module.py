@@ -146,7 +146,7 @@ class ModuleRun(minitorch.Module):
 
 
 @pytest.mark.task0_4
-@pytest.mark.xfail
+@pytest.mark.xfail # 这里定义了xfail！
 def test_module_fail_forward():
     mod = minitorch.Module()
     mod()
